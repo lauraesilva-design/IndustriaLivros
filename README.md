@@ -4,15 +4,18 @@
 
 **CPL – Central de Página e Literatura** é uma indústria de livros que atende livrarias, escolas e parceiros comerciais.
 
-## 2. Sobre o sistema
+## 2. logo do projeto
+![logotipo](image.png).
+
+## 3. Sobre o sistema
 
 O CPL Gestão é um sistema desenvolvido para facilitar a administração de uma indústria de livros, permitindo gerenciar produtos, estoque, clientes, pedidos, vendas e entregas em uma única plataforma.
 
-## 3. Objetivo
+## 4. Objetivo
 
 Organizar e otimizar os processos da indústria, reduzindo erros e facilitando a comunicação com clientes e parceiros comerciais.
 
-## 4. Principais funcionalidades
+## 5. Principais funcionalidades
 
 - Cadastro e gerenciamento de funcionários.
 - Cadastro e consulta de livros.
@@ -22,7 +25,7 @@ Organizar e otimizar os processos da indústria, reduzindo erros e facilitando a
 - Controle de entregas.
 - Relatórios de vendas e estoque.
 
-## 5. Tecnologias utilizadas
+## 6. Tecnologias utilizadas
 
 - **Frontend:** React, TypeScript e Tailwind CSS.
 - **Backend:** Node.js, TypeScript e Express.
@@ -33,13 +36,13 @@ Organizar e otimizar os processos da indústria, reduzindo erros e facilitando a
 - **Versionamento:** Git e GitHub.
 - **Testes:** Postman.
 
-## 6. Integrantes
+## 7. Integrantes
 
 - Patricia
 - Camila
 - Laura
 
-## 7. Como executar o projeto
+## 8. Como executar o projeto
 
 1. Instalar o Node.js e o PostgreSQL.
 2. Clonar o repositório do GitHub.
@@ -47,4 +50,3 @@ Organizar e otimizar os processos da indústria, reduzindo erros e facilitando a
 4. Configurar o banco de dados no arquivo `.env`.
 5. Executar as migrações do Prisma.
 6. Iniciar o backend e o frontend com `npm run dev`.
-
