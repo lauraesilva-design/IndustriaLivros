@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* MENU */
+
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 22px 8%;
+  background: #071a35;
+}
+
+header h2 {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: #79b8e8;
+}
+
+/* INICIO */
+
+.inicio {
+  background: #102b50;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 8%;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.texto {
+  max-width: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.texto h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #d5e2f0;
+}
+
+.botao {
+  display: inline-block;
+  background: #79b8e8;
+  color: #071a35;
+  padding: 14px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: white;
+}
+
+.imagem {
+  font-size: 150px;
+}
+
+/* SOBRE */
+
+.sobre {
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.sobre h2,
+.funcionalidades h2 {
+  color: #102b50;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  max-width: 650px;
+  margin: auto;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* FUNCIONALIDADES */
+
+.funcionalidades {
+  background: #edf2f8;
+  text-align: center;
+  padding: 60px 8%;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  width: 220px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px #cbd5e1;
+  border-bottom: 4px solid #102b50;
+}
+
+.card span {
+  font-size: 40px;
+}
+
+.card h3 {
+  margin: 15px 0;
+  color: #102b50;
+}
+
+.card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* RODAPÉ */
+
+footer {
+  background: #071a35;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  line-height: 2;
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+
+  header {
+    flex-direction: column;
+    gap: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }
+
+  .inicio {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .texto h1 {
+    font-size: 30px;
+  }
+
+  .imagem {
+    font-size: 100px;
+  }
+
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.logo span {
+  color: #79b8e8;
 }
