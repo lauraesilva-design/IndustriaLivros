@@ -1,0 +1,87 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// FUNCIONARIOS
+model Funcionario {
+  id       Int    @id @default(autoincrement())
+  nome     String
+  email    String @unique
+  senha    String
+  telefone String
+  cargo    String
+}
+
+// LIVROS
+model Livro {
+  id         Int      @id @default(autoincrement())
+  titulo     String
+  autor      String
+  editora    String
+  genero     String
+  preco      Float
+  quantidade Int
+
+  estoque Estoque?
+}
+
+// ESTOQUE
+model Estoque {
+  id               Int    @id @default(autoincrement())
+  livroId          Int    @unique
+  quantidade       Int
+  tipoMovimentacao String
+
+  livro Livro @relation(fields: [livroId], references: [id])
+}
+
+// CLIENTES
+model Cliente {
+  id       Int    @id @default(autoincrement())
+  nome     String
+  email    String @unique
+  telefone String
+  endereco String
+
+  pedidos Pedido[]
+}
+
+// PEDIDOS
+model Pedido {
+  id        Int      @id @default(autoincrement())
+  clienteId Int
+  data      DateTime @default(now())
+  valorTotal Float
+  status    String   @default("Pendente")
+
+  cliente  Cliente   @relation(fields: [clienteId], references: [id])
+  venda    Venda?
+  entrega  Entrega?
+}
+
+// VENDAS
+model Venda {
+  id       Int      @id @default(autoincrement())
+  pedidoId Int      @unique
+  data     DateTime @default(now())
+  valor    Float
+
+  pedido Pedido @relation(fields: [pedidoId], references: [id])
+}
+
+// ENTREGAS
+model Entrega {
+  id          Int      @id @default(autoincrement())
+  pedidoId    Int      @unique
+  endereco    String
+  dataEntrega DateTime
+  status      String   @default("Pendente")
+
+  pedido Pedido @relation(fields: [pedidoId], references: [id])
+}
