@@ -1,15 +1,20 @@
-import express from 'express'
-import cors from 'cors'
+import express from "express";
+import prisma from "./config/prisma.js";
 
-const app = express()
+const app = express();
 
-app.use(cors())
-app.use(express.json())
+app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.json({ mensagem: 'API funcionando!' })
-})
+app.get("/", async (req, res) => {
+  try {
+    await prisma.$connect();
 
-app.listen(3333, () => {
-  console.log('Servidor rodando na porta 3333')
-})
+    res.send("CPL conectada ao banco SQLite!");
+  } catch (erro) {
+    res.status(500).send("Erro ao conectar ao banco.");
+  }
+});
+
+app.listen(3001, () => {
+  console.log("Servidor rodando na porta 3001");
+});

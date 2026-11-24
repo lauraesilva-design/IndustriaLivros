@@ -1,11 +1,10 @@
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url = env("DATABASE_URL")
 }
 
 // FUNCIONARIOS
@@ -20,15 +19,14 @@ model Funcionario {
 
 // LIVROS
 model Livro {
-  id         Int      @id @default(autoincrement())
-  titulo     String
-  autor      String
-  editora    String
-  genero     String
-  preco      Float
+  id        Int     @id @default(autoincrement())
+  titulo    String
+  autor     String
+  editora   String
+  genero    String
+  preco     Float
   quantidade Int
-
-  estoque Estoque?
+  estoque   Estoque?
 }
 
 // ESTOQUE
