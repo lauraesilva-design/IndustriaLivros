@@ -1,13 +1,14 @@
+
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "sqlite"
-  url = env("DATABASE_URL")
+  url      = env("DATABASE_URL") 
 }
 
-// FUNCIONARIOS
+// FUNCIONÁRIOS
 model Funcionario {
   id       Int    @id @default(autoincrement())
   nome     String
@@ -19,21 +20,22 @@ model Funcionario {
 
 // LIVROS
 model Livro {
-  id        Int     @id @default(autoincrement())
-  titulo    String
-  autor     String
-  editora   String
-  genero    String
-  preco     Float
+  id         Int      @id @default(autoincrement())
+  titulo     String
+  autor      String
+  editora    String
+  genero     String
+  preco      Float
   quantidade Int
-  estoque   Estoque?
+  estoque    Estoque?
 }
+
 
 // ESTOQUE
 model Estoque {
-  id               Int    @id @default(autoincrement())
-  livroId          Int    @unique
-  quantidade       Int
+  id               Int      @id @default(autoincrement())
+  livroId          Int      @unique
+  quantidade       Int      @default(0)
   tipoMovimentacao String
 
   livro Livro @relation(fields: [livroId], references: [id])
@@ -52,15 +54,29 @@ model Cliente {
 
 // PEDIDOS
 model Pedido {
-  id        Int      @id @default(autoincrement())
-  clienteId Int
-  data      DateTime @default(now())
+  id         Int      @id @default(autoincrement())
+  clienteId  Int
+  data       DateTime @default(now())
   valorTotal Float
-  status    String   @default("Pendente")
+  status     String   @default("Pendente")
 
-  cliente  Cliente   @relation(fields: [clienteId], references: [id])
-  venda    Venda?
-  entrega  Entrega?
+  cliente Cliente @relation(fields: [clienteId], references: [id])
+  itens   ItemPedido[]
+  venda   Venda?
+  entrega Entrega?
+}
+
+// ITENS DO PEDIDO
+model ItemPedido {
+  id            Int   @id @default(autoincrement())
+  pedidoId      Int
+  livroId       Int
+  quantidade    Int
+  precoUnitario Float
+
+  pedido Pedido @relation(fields: [pedidoId], references: [id])
+
+  @@unique([pedidoId, livroId])
 }
 
 // VENDAS
