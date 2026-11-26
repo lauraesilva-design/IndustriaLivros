@@ -1,0 +1,129 @@
+.login-pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: 'DM Sans', sans-serif;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 20, 38, 0.93),
+      rgba(8, 20, 38, 0.8)
+    ),
+    url("./images/livros.cpl.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-caixa {
+  width: 100%;
+  max-width: 410px;
+  background: #fffaf3;
+  border-radius: 18px;
+  padding: 38px 34px;
+  text-align: center;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+}
+
+.login-logo {
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.login-caixa h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #142a49;
+}
+
+.login-subtitulo {
+  color: #68768a;
+  font-size: 14px;
+  margin: 6px 0 26px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.login-form label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #142a49;
+  margin-bottom: 6px;
+}
+
+.login-form input {
+  height: 46px;
+  padding: 0 15px;
+  margin-bottom: 18px;
+  border: 1px solid #d5dee8;
+  border-radius: 10px;
+  background: white;
+  font-family: inherit;
+  font-size: 14px;
+  color: #172a46;
+  outline: none;
+  transition: 0.25s;
+}
+
+.login-form input:focus {
+  border-color: #83bce9;
+  box-shadow: 0 0 0 3px rgba(131, 188, 233, 0.3);
+}
+
+.login-form button {
+  height: 48px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 30px;
+  background: #102442;
+  color: white;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: #83bce9;
+  color: #102442;
+  transform: translateY(-2px);
+}
+
+.login-cadastro {
+  margin-top: 22px;
+  font-size: 13px;
+  color: #68768a;
+}
+
+.login-cadastro a {
+  color: #2f78b5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-cadastro a:hover {
+  text-decoration: underline;
+}
+
+.login-voltar {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #68768a;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.login-voltar:hover {
+  color: #142a49;
+}

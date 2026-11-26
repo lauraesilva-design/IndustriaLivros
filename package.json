@@ -1,0 +1,21 @@
+{
+  "name": "industrialivros",
+  "version": "1.0.0",
+  "description": "**CPL – Central de Página e Literatura** é uma indústria de livros que atende livrarias, escolas e parceiros comerciais.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauraesilva-design/IndustriaLivros.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lauraesilva-design/IndustriaLivros/issues"
+  },
+  "homepage": "https://github.com/lauraesilva-design/IndustriaLivros#readme"
+}

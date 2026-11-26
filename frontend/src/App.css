@@ -85,14 +85,24 @@ body {
   color: #85c5f2;
 }
 
-.navegacao .botao-login {
+.acoes-cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.botao-login {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
   border: 1px solid #9fc7e9;
   border-radius: 25px;
   padding: 10px 25px;
+  transition: 0.3s;
 }
 
-.navegacao .botao-login:hover {
-  background: #85bde8;
+.botao-login:hover {
+  background: #ffffff;
   color: #102442;
 }
 
@@ -212,7 +222,7 @@ body {
       rgba(8, 20, 38, 0.78) 48%,
       rgba(8, 20, 38, 0.25) 100%
     ),
-    url("./public/livros.cpl.png");
+    url("./images/livros.cpl.png");
 
   background-size: cover;
   background-position: center;
@@ -278,7 +288,6 @@ body {
   height: 235px;
   object-fit: contain;
   border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 
@@ -382,13 +391,13 @@ body {
 /* CHAMADA FINAL */
 
 .chamada {
-  background:
+    background:
     linear-gradient(
       90deg,
-      rgba(9,22,40,0.91),
-      rgba(9,22,40,0.76)
+      rgba(9, 22, 40, 0.91),
+      rgba(9, 22, 40, 0.76)
     ),
-    url("./public/livros.cpl.png");
+    url("./images/livros.cpl.png");
 
   background-size: cover;
   background-position: center;
