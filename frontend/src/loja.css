@@ -248,3 +248,368 @@
     font-size: 28px;
   }
 }
+
+/* Cabeçalho da página de favoritos */
+
+.favoritos-cabecalho {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.favoritos-cabecalho h1 {
+  color: #1b2a4a;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.favoritos-cabecalho p {
+  color: #777;
+  font-size: 15px;
+}
+
+/* Botão de favoritos do cabeçalho */
+
+.loja-icone {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loja-icone.selecionado {
+  color: #e63946;
+}
+
+/* Coração dos livros */
+
+.produto-favorito {
+  border: none;
+  background: transparent;
+  color: #999;
+  font-size: 27px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.produto-favorito:hover {
+  transform: scale(1.2);
+}
+
+.produto-favorito.ativo {
+  color: #e63946;
+}
+
+/* Botão voltar para loja */
+
+.voltar-loja {
+  background: #1b2a4a;
+  color: white;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.voltar-loja:hover {
+  background: #9cb498;
+  color: #1b2a4a;
+}
+
+/* Quando não existem favoritos */
+
+.loja-vazio {
+  text-align: center;
+  padding: 60px 20px;
+  color: #777;
+}
+
+.loja-vazio span {
+  font-size: 55px;
+  color: #e63946;
+}
+
+.loja-vazio h2 {
+  color: #1b2a4a;
+  margin: 15px 0;
+}
+
+.loja-vazio p {
+  margin-bottom: 15px;
+}
+
+/* CARRINHO DE COMPRAS */
+
+.carrinho-detalhes {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.carrinho-detalhes p {
+  color: #5b6b7a;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.carrinho-detalhes strong {
+  color: #1b2a4a;
+}
+
+.carrinho-remover {
+  width: 100%;
+  padding: 11px;
+  margin-top: 12px;
+  border: 1px solid #c94b4b;
+  border-radius: 8px;
+  background: white;
+  color: #c94b4b;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carrinho-remover:hover {
+  background: #c94b4b;
+  color: white;
+}
+
+/* RESUMO DA COMPRA */
+
+.carrinho-resumo {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.carrinho-resumo h2 {
+  color: #1b2a4a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.resumo-linha,
+.resumo-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  color: #5b6b7a;
+}
+
+.resumo-total {
+  border-top: 1px solid #ddd;
+  padding-top: 18px;
+  color: #1b2a4a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.finalizar-compra {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #1b2a4a;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.finalizar-compra:hover {
+  background: #9cb498;
+  color: #1b2a4a;
+}
+
+/* CATEGORIAS */
+
+.categoria-secao {
+  margin: 45px 0;
+  width: 100%;
+}
+
+.categoria-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #9cb498;
+  padding-bottom: 12px;
+}
+
+.categoria-titulo h2 {
+  color: #1b2a4a;
+  font-size: 27px;
+}
+
+.categoria-setas {
+  display: flex;
+  gap: 10px;
+}
+
+.categoria-setas button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #1b2a4a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categoria-setas button:hover {
+  background: #9cb498;
+  color: #1b2a4a;
+}
+
+/* FILEIRAS HORIZONTAIS */
+
+.categoria-livros {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 8px 3px 18px;
+}
+
+.categoria-livros::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARDS DOS LIVROS */
+
+.livro-card {
+  position: relative;
+  flex: 0 0 210px;
+  min-height: 390px;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.livro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.13);
+}
+
+/* CORAÇÃO */
+
+.livro-coracao {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.livro-coracao.ativo {
+  color: #e63946;
+}
+
+/* CAPA ILUSTRATIVA */
+
+.livro-capa {
+  width: 125px;
+  height: 155px;
+  background: #1b2a4a;
+  border-radius: 5px;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: white;
+  box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.livro-capa span {
+  font-size: 42px;
+}
+
+.livro-capa small {
+  color: #cbd8c3;
+  font-size: 11px;
+}
+
+/* INFORMAÇÕES */
+
+.livro-card h3 {
+  color: #1b2a4a;
+  font-size: 15px;
+  margin: 8px 0;
+  min-height: 36px;
+}
+
+.livro-autor,
+.livro-editora,
+.livro-estoque {
+  color: #777;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.livro-preco {
+  color: #1b2a4a;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.livro-adicionar {
+  width: 100%;
+  padding: 10px 8px;
+  margin-top: auto;
+  background: #1b2a4a;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.livro-adicionar:hover {
+  background: #9cb498;
+  color: #1b2a4a;
+}
+
+.livro-controles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  font-size: 13px;
+  color: #1b2a4a;
+}
+.livro-capa {
+  width: 150px;
+  height: 210px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f1f1f1;
+}
+
+.livro-capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
